@@ -1,10 +1,12 @@
 import { BrowserRouter as Router, Routes, Link, Route } from "react-router-dom";
+import GlobalStyle from "./Globalcomponents/Globalcomponent";
 import { Navbar } from "./pages/Navbar";
 import Shoppingcart from "./pages/Shoppingcart";
 
 function App() {
   return (
     <>
+    <GlobalStyle />
         <Router>
           
           <Navbar sticky="top">
