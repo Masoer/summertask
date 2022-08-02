@@ -4,7 +4,16 @@ import {Link} from "react-router-dom"
 
 export const Navbar = styled.ul `
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+    text-align: center;
+    /* display:flex;
+    justify-content: flex-start;
     border: 2px solid #9c404b;
     border-radius: 5px;
     background: #5B0F4C;
@@ -14,13 +23,13 @@ export const Navbar = styled.ul `
     text-align: left;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 1; */
 
 `
 
 
 export const StyledLink = styled(Link)`
-    color: white;
+    
     -webkit-text-stroke: 0.5px #9c404b;
     text-decoration: none;
     background: none;

@@ -1,6 +1,10 @@
 import { BrowserRouter as Router, Routes, Link, Route } from "react-router-dom";
 import GlobalStyle from "./Globalcomponents/Globalcomponent";
+import Aboutus from "./pages/Aboutus";
+
 import { Navbar } from "./pages/Navbar";
+import Owllogo from "./pages/Owllogo";
+import Shop from "./pages/Shop";
 import Shoppingcart from "./pages/Shoppingcart";
 
 function App() {
@@ -10,15 +14,20 @@ function App() {
         <Router>
           
           <Navbar sticky="top">
-            <Link to ="/">/Shop</Link>
+            <Owllogo/>
+            
+            <Link to ="/Shop"> /Shop </Link>
             <Link to ="/Shoppingcart">/Shopping cart</Link>
+            <Link to ="/Aboutus"> /About us</Link>
           
           
           </Navbar>
 
-          <Routes>
-            <Route path="/" element={<Shop />} />
+          <Routes>a
+            <Route path="*" element={<Shop />} />
             <Route path="/Shoppingcart" element={<Shoppingcart/>} />
+            <Route path="/Aboutus" element={<Aboutus />} />
+            
           </Routes>
         
 
@@ -32,12 +41,5 @@ function App() {
 }
 
 
-const Shop = () => {
-  return (
-      <>
-      <h1>shop</h1>
-      </>
-  )
-};
 
 export default App;
