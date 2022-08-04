@@ -1,6 +1,8 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Styledcontainer, StyledImage, StyledPage } from "./Styleproduct";
+
 
 
 
@@ -29,25 +31,32 @@ const Product = () => {
         return(           
             
             <div>
-                {ProductData.map((item) => {
-                return (
-                <p key = {item.id}>
-                    <img src={item.image} alt="product"></img>
-                    <h2>{item.title}</h2>
-                    <br></br> 
-                    Price: ${item.price} 
-                    <br></br>
-                    <button onClick = { () => {
-                        currentCart.push(item)
-                    }}>Buy</button>
-                    <button onClick = { () => { 
-                        localStorage.setItem ("cart", JSON.stringify(currentCart))
-                    }}> To cart </button>
-                </p>
+                <StyledPage>
                 
-                )
-                })}
+                    {ProductData.map((item) => {
+                    return (
+                    <Styledcontainer>
+                        
+                        <div key = {item.id}>
+                            <StyledImage src={item.image} alt="product"/>
+                            <h2>{item.title}</h2>
+                            <br></br> 
+                            Price: ${item.price} 
+                            <br></br>
+                            <button onClick = { () => {
+                                currentCart.push(item)
+                            }}>Buy</button>
+                            <button onClick = { () => { 
+                                localStorage.setItem ("cart", JSON.stringify(currentCart))
+                            }}> Add to cart </button>
+                        </div>
+                        
+                    </Styledcontainer>
+                    
+                    )
+                    })}
                 
+                </StyledPage>
             </div>
         
         )}

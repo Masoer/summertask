@@ -3,6 +3,7 @@ import Fashion from "./Fashion.jpg";
 import  styled  from "styled-components";
 import Product from "./Product";
 
+
 export const Container = styled.section`
     position: relative;
     text-align: center;
@@ -38,6 +39,7 @@ export const Shopnowbutton = styled.button `
 
 `
 
+   
 
 const Shop = () => {
     return (
@@ -49,10 +51,10 @@ const Shop = () => {
                 <Bottomtext>
                     <h1>New Fall-Winter Collection</h1>
                     <p>Shop the latest Fashion</p>
-                    <Shopnowbutton>Shop now</Shopnowbutton>
+                    <Shopnowbutton >Shop now</Shopnowbutton>
                 </Bottomtext>
             </Container>
-
+            <div></div>
             <Product />
                 
             
