@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 
 
 const Product = () => {
+    
+    let currentCart = []
 
     const [ProductData, setProductData] = useState ();
     
@@ -29,9 +31,23 @@ const Product = () => {
             <div>
                 {ProductData.map((item) => {
                 return (
-                <li key = {item.id}><h2>{item.title}</h2><br></br> Price: {item.price} <br></br>{item.description}</li>
+                <p key = {item.id}>
+                    <img src={item.image} alt="product"></img>
+                    <h2>{item.title}</h2>
+                    <br></br> 
+                    Price: ${item.price} 
+                    <br></br>
+                    <button onClick = { () => {
+                        currentCart.push(item)
+                    }}>Buy</button>
+                    <button onClick = { () => { 
+                        localStorage.setItem ("cart", JSON.stringify(currentCart))
+                    }}> To cart </button>
+                </p>
+                
                 )
                 })}
+                
             </div>
         
         )}
