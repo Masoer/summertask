@@ -39,8 +39,6 @@ export const Shopnowbutton = styled.button `
 
 `
 
-   
-
 const Shop = () => {
     return (
         <>
