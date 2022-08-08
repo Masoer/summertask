@@ -1,31 +1,41 @@
+import { useState } from "react";
+import { AlignRight, CartItem, StyledImage } from "./Styleproduct";
+
 const Shoppingcart = () => {
-    let finalCart = localStorage.getItem("cart");
-    let renderCart = JSON.parse(finalCart)
+  const [finalCart, setFinalCart] = useState(localStorage.getItem("cart"));
+  const [renderCart, setRenderCart] = useState(JSON.parse(finalCart));
 
-   
+  const [ProductData, setProductData] = useState(renderCart);
+  const removeItem = (index) => {
+    setProductData(ProductData.filter((o, i) => index !== i));
+  };
 
-    return (
-        <>
-        <h1>Cart</h1>
+  return (
+    <>
+      <h1>Cart</h1>
 
-        {renderCart.map((item) => {
-            return(
-                <p key={item.id}>
-
-                    <img src={item.image} alt="product"></img>
-                    <h2>{item.title}</h2>
-                    <br></br> 
-                    Price: ${item.price} 
-                    <br></br>
-                    <button>Delete</button>
-                </p>
-
-            )
-            
-            } )}
-        </>
-    )
+      {renderCart.map((item) => {
+        return (
+          <CartItem key={item.id}>
+            <StyledImage src={item.image} alt="product"></StyledImage>
+            <h3>{item.title}</h3>
+            Price: ${item.price}
+            <button
+              onClick={() => {
+                renderCart.pop(removeItem(item));
+              }}
+            >
+              Delete
+            </button>
+          </CartItem>
+        );
+      })}
+      <AlignRight>
+        <p>Total Cost:</p>
+        <button>Place Order</button>
+      </AlignRight>
+    </>
+  );
 };
-
 
 export default Shoppingcart;
