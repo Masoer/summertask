@@ -31,8 +31,16 @@ const Shoppingcart = () => {
         );
       })}
       <AlignRight>
-        <p>Total Cost:</p>
-        <button>Place Order</button>
+        <p>Total Cost: Free</p>
+        <button
+          onClick={() => {
+            alert(
+              "Not a real store. This page is made with react using axios API Call."
+            );
+          }}
+        >
+          Place Order
+        </button>
       </AlignRight>
     </>
   );

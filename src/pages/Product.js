@@ -37,18 +37,19 @@ const Product = () => {
                   <button
                     onClick={() => {
                       currentCart.push(item);
+                      localStorage.setItem("cart", JSON.stringify(currentCart));
                     }}
                   >
-                    Buy
+                    Add to cart
                   </button>
-                  <button
+                  {/* <button
                     onClick={() => {
                       localStorage.setItem("cart", JSON.stringify(currentCart));
                     }}
                   >
-                    {" "}
-                    Add to cart{" "}
-                  </button>
+                    
+                    Add to cart
+                  </button> */}
                 </div>
               </Styledcontainer>
             );

@@ -10,36 +10,25 @@ import Shoppingcart from "./pages/Shoppingcart";
 function App() {
   return (
     <>
-    <GlobalStyle />
-        <Router>
-          
-          <Navbar sticky="top">
-            <Owllogo/>
-            
-            <Link to ="/Shop"> /Shop </Link>
-            <Link to ="/Shoppingcart">/Shopping cart</Link>
-            <Link to ="/Aboutus"> /About us</Link>
-          
-          
-          </Navbar>
+      <GlobalStyle />
+      <Router>
+        <Navbar sticky="top">
+          <Owllogo />
 
-          <Routes>a
-            <Route path="*" element={<Shop />} />
-            <Route path="/Shoppingcart" element={<Shoppingcart/>} />
-            <Route path="/Aboutus" element={<Aboutus />} />
-            
-          </Routes>
-        
+          <Link to="/Shop"> /Shop </Link>
+          <Link to="/Shoppingcart">/Shopping cart</Link>
+          <Link to="/Aboutus"> /About us</Link>
+        </Navbar>
 
-
+        <Routes>
+          a
+          <Route path="*" element={<Shop />} />
+          <Route path="/Shoppingcart" element={<Shoppingcart />} />
+          <Route path="/Aboutus" element={<Aboutus />} />
+        </Routes>
       </Router>
-    
-   
     </>
-    
   );
 }
-
-
 
 export default App;
