@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Masoer/summertask.git/static/css/main.e6c13ad2.css",
+    "main.js": "/Masoer/summertask.git/static/js/main.d8e8c124.js",
+    "static/js/787.23170c61.chunk.js": "/Masoer/summertask.git/static/js/787.23170c61.chunk.js",
+    "static/media/Fashion.jpg": "/Masoer/summertask.git/static/media/Fashion.764120eaaceba497e67b.jpg",
+    "static/media/Fashionowl.png": "/Masoer/summertask.git/static/media/Fashionowl.8a44c63b8dd50026aac2.png",
+    "index.html": "/Masoer/summertask.git/index.html",
+    "main.e6c13ad2.css.map": "/Masoer/summertask.git/static/css/main.e6c13ad2.css.map",
+    "main.d8e8c124.js.map": "/Masoer/summertask.git/static/js/main.d8e8c124.js.map",
+    "787.23170c61.chunk.js.map": "/Masoer/summertask.git/static/js/787.23170c61.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.d8e8c124.js"
+  ]
+}
